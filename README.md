@@ -1,6 +1,8 @@
 Microsoft HBase REST Client Library for .NET
 ======
 
+* 31/10/2019 Mikhail Burilov: Modified library to use in .net core. Modified to use with any HBase server, not only Azure HDInsight.*
+
 This is C# client library for HBase on Azure HDInsight.
 
 It has been compatible with all HBase versions since 0.96.2 (HDI 3.0).

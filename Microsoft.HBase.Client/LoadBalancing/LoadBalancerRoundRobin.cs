@@ -136,13 +136,14 @@ namespace Microsoft.HBase.Client.LoadBalancing
 
         internal static void Configure()
         {
-            _workerHostNamePrefix = ReadFromConfig<string>(Constants.WorkerHostNamePrefixConfigKey, String.Copy, Constants.WorkerHostNamePrefixDefault);
+            /*_workerHostNamePrefix = ReadFromConfig<string>(Constants.WorkerHostNamePrefixConfigKey, String.Copy, Constants.WorkerHostNamePrefixDefault);
             _workerRestEndpointPort = ReadFromConfig<int>(Constants.WorkerRestEndpointPortConfigKey, Int32.Parse, Constants.WorkerRestEndpointPortDefault);
 
-            var refreshIntervalFromConfig = ReadFromConfig<int>(Constants.RefreshIntervalInMillisecondsConfigKey, Int32.Parse, Constants.RefreshIntervalInMillisecondsDefault);
-            _refreshInterval = TimeSpan.FromMilliseconds(refreshIntervalFromConfig);
+            var refreshIntervalFromConfig = 5000; //ReadFromConfig<int>(Constants.RefreshIntervalInMillisecondsConfigKey, Int32.Parse, Constants.RefreshIntervalInMillisecondsDefault);
+            _refreshInterval = TimeSpan.FromMilliseconds(refreshIntervalFromConfig);*/
         }
 
+        /*
         internal static T ReadFromConfig<T>(string configKey, Func<string, T> parseConfigValue, T defaultValue)
         {
             T result;
@@ -163,7 +164,7 @@ namespace Microsoft.HBase.Client.LoadBalancing
             }
 
             return result;
-        }
+        }*/
 
     }
 }

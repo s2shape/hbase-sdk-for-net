@@ -37,13 +37,13 @@ namespace Microsoft.HBase.Client
         public ClusterCredentials(Uri clusterUri, string userName, string password)
         {
             clusterUri.ArgumentNotNull("clusterUri");
-            userName.ArgumentNotNullNorEmpty("username");
-            password.ArgumentNotNullNorEmpty("password");
+            //userName.ArgumentNotNullNorEmpty("username");
+            //password.ArgumentNotNullNorEmpty("password");
 
             ClusterUri = clusterUri;
             UserName = userName;
-            _clusterPassword = password.ToSecureString();
-            _clusterPassword.MakeReadOnly();
+            _clusterPassword = password?.ToSecureString();
+            _clusterPassword?.MakeReadOnly();
         }
 
         /// <summary>
